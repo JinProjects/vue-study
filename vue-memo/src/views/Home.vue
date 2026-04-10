@@ -11,7 +11,7 @@
               <span role="button">삭제</span>
             </div>
           </div>
-          <!--     메모내용      -->
+          <!--     메모내용       -->
           <div class="mt-2">{{ m.content }}</div>
         </div>
       </div>
