@@ -8,7 +8,7 @@
             <!--  메모 제목  -->
             <b>{{ m.title }}</b>
             <div>
-              <span role="button">삭제</span>
+              <span role="button" @click.prevent="remove(m.id)">삭제</span>
             </div>
           </div>
           <!--     메모내용       -->
@@ -27,6 +27,14 @@ const storageService = new StorageService("myMemo");
 const state = reactive({
   memos: []
 });
+
+const remove = (id) => {
+  if(!window.confirm('삭제하시겠습니까?')){
+    return;
+  }
+  storageService.delItem(id);
+  state.memos = storageService.getItems();
+}
 
 (async function onCreated(){
   state.memos = storageService.getItems();

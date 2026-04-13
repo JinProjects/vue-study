@@ -8,6 +8,16 @@ const router = createRouter({
       name: 'home',
       component: () => import('../views/HOME.vue')
     },
+    {
+      path: '/memos/add',
+      name: 'memoAdd',
+      component: () => import('../views/Form.vue')
+    },
+    {
+      path: '/memos/:id',
+      name: 'memoDetail',
+      component: () => import('../views/Form.vue')
+    },
   ]
 })
 
