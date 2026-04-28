@@ -25,7 +25,7 @@ public class Item {
     private Integer price;
 
     @Column(nullable = false)
-    private Integer discounter;
+    private Integer discountPer;
 
     @Column(nullable = false, updatable = false)
     @CreationTimestamp
@@ -37,7 +37,7 @@ public class Item {
                 .name(name)
                 .imgPath(imgPath)
                 .price(price)
-                .discountPer(discounter)
+                .discountPer(discountPer)
                 .build();
     }
 }

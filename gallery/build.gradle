@@ -31,7 +31,7 @@ dependencies {
 
     //롬복
     compileOnly 'org.projectlombok:lombok:1.18.30'
-    annotationProcessor 'org.priectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
 tasks.named('test') {
