@@ -28,7 +28,7 @@ public class BaseOrderService implements OrderService{
     //주문 목록 조회
     @Override
     public List<OrderRead> findAll(Integer memberId) {
-        return orderRepository.findAllByMemberIdOrderIdDesc(memberId).stream().map(Order::toRead).toList();
+        return orderRepository.findAllByMemberIdOrderByIdDesc(memberId).stream().map(Order::toRead).toList();
     }
     //주문 상세 조회
     @Override

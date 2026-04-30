@@ -9,7 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Getter
-@Setter
+@Entity
 @Table(name = "carts")
 public class Cart {
     @Id
